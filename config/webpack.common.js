@@ -10,7 +10,8 @@ module.exports = function(webpackEnv){
     plugins: [
       new HtmlWebpackPlugin({
         inject: true,
-        template: '/public/index.html'
+        template: '/public/index.html',
+        publicPath: isEnvDev ? 'auto' : 'build',
       })
     ],
     output: {
